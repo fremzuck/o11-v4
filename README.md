@@ -22,7 +22,7 @@ A simple Dockerized application to run the o11-v4 using Node.js or Python.
 2. **Clone the repository**
 
    ```bash
-   git clone https://github.com/djdoolky76/o11-v4
+   git clone https://github.com/fremzuck/o11-v4
    cd o11-v4
    ```
 
