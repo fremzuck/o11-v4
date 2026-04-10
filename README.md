@@ -38,11 +38,11 @@ Before running the container, decide which server runtime you want to use:
 
 * **Node.js (default)**
 ```
-sudo docker run -d -p 80:80 -p 443:443 -p 5454:5454 -p 8484:8484 -e IP_ADDRESS=SERVER-IP-HERE -e SERVER_TYPE=nodejs --name o11 o11-v4
+sudo docker run -d -p 5454:5454 -p 6060:6060 -p 6070:6070 -e IP_ADDRESS=you_ip -e SERVER_TYPE=nodejs -v /root/o11v4/scripts:/home/o11/scripts -v /root/o11v4/keys:/home/o11/keys --name o11 o11-v4
 ```
 * **Python**
 ```
-sudo docker run -d -p 80:80 -p 443:443 -p 5454:5454 -p 8484:8484 -e IP_ADDRESS=SERVER-IP-HERE-e SERVER_TYPE=python --name o11 o11-v4
+sudo docker run -d -p 5454:5454 -p 6060:6060 -p 6070:6070 -e IP_ADDRESS=you_ip -e SERVER_TYPE=python -v /root/o11v4/scripts:/home/o11/scripts -v /root/o11v4/keys:/home/o11/keys --name o11 o11-v4
 ```
 **Important:** Replace `SERVER-IP-HERE` with your actual server IP or domain.
 
@@ -51,7 +51,7 @@ sudo docker run -d -p 80:80 -p 443:443 -p 5454:5454 -p 8484:8484 -e IP_ADDRESS=S
 Once the container is running, open your browser and navigate to:
 
 ```
-http://SERVER-IP-HERE:8484
+http://SERVER-IP-HERE:6060
 ```
 
 **Login credentials:**
