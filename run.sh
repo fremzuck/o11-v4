@@ -18,7 +18,7 @@ mount -av
 while true; do
   if ! pgrep "o11v4" > /dev/null; then
     # Start the o11 process
-    /home/o11/o11v4 -p 8484 -noramfs -f /usr/bin/ffmpeg -path "/home/o11/" -noautostart -plstreamname "%s [%p]" &
+    /home/o11/o11v4 -p 6060 -noramfs -f /usr/bin/ffmpeg -path "/home/o11/" -noautostart -plstreamname "%s [%p]" -epgport 6070 &
     
     # Wait before checking again to give the process time to start
     sleep 10
